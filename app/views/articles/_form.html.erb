@@ -18,7 +18,14 @@
     <div>
     <%= form.submit %>
     </div>
+
     <br>
+
+    <div>
+        <%= form.label :status %><br>
+        <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+
     <%= link_to "Home", root_path %>
 
 <% end %>

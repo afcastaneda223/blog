@@ -2,6 +2,11 @@
 
 <p><%= @article.body %></p>
 
+<h2>Comments</h2>
+<%= render @article.comments%>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
 <ul>
     <li>
         <%= link_to "Edit", edit_article_path(@article) %>
@@ -12,7 +17,8 @@
             method: :delete, 
             data: { confirm: "Are you sure?" } %>
     </li>
+
     <li>
-        <%= link_to "Home", root_path %>
+            <%= link_to "Home", root_path %>
     </li>
 </ul>
